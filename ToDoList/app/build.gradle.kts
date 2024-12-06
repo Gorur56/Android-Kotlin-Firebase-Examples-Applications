@@ -51,4 +51,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.firebase.storage)
+    implementation(libs.firebase.database)
+    implementation(kotlin("script-runtime"))
+
+    implementation(libs.glide)
+    annotationProcessor(libs.compiler)
+
 }
