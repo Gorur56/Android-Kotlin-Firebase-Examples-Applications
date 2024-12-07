@@ -13,7 +13,7 @@ import com.example.todolist.R
 import com.example.todolist.entity.DataClass
 
 class MyAdapter(private val context: Context,
-                private val dataList:List<DataClass>): RecyclerView.Adapter<MyViewHolder>() {
+                private var dataList:List<DataClass>): RecyclerView.Adapter<MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item, parent, false)
         return MyViewHolder(view)
@@ -33,6 +33,11 @@ class MyAdapter(private val context: Context,
 
     override fun getItemCount(): Int {
         return dataList.size
+    }
+
+    fun searchDataList( searchList: List<DataClass>) {
+        dataList = searchList
+        notifyDataSetChanged()
     }
 
 }

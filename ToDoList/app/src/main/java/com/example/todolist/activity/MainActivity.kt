@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -73,5 +74,28 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, UploadActivity::class.java)
             startActivity(intent)
         }
+
+        binding.search.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                searchList(newText)
+                return true
+            }
+
+        } )
+    }
+
+    //After onCreate
+    fun searchList(text: String ){
+        val searchList = ArrayList<DataClass>()
+        for( dataClass in dataList ) {
+            if( dataClass.dataTitle?.lowercase()?.contains(text.lowercase()) == true) {
+                searchList.add(dataClass)
+            }
+        }
+        adapter.searchDataList(searchList)
     }
 }
