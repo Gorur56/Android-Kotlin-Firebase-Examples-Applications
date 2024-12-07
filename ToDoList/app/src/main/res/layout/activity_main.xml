@@ -19,13 +19,30 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"/>
+    
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/search"
+        android:iconifiedByDefault="false"
+        android:searchHintIcon="@null"
+        android:queryHint="Search..."
+        android:focusable="false"
+        android:layout_below="@+id/toolbar"
+        android:closeIcon="@drawable/baseline_clear_24"
+        android:searchIcon="@drawable/baseline_search_24"
+        android:background="@drawable/saturated_border"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/recycleView"
-        android:layout_below="@+id/toolbar"
+        android:layout_below="@+id/search"
         android:scrollbars="vertical"/>
     
     <com.google.android.material.floatingactionbutton.FloatingActionButton
