@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.crudadmin"
+    namespace = "com.example.firebasecloudmessaging"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.crudadmin"
+        applicationId = "com.example.firebasecloudmessaging"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -35,8 +35,8 @@ android {
         jvmTarget = "11"
     }
 
-    buildFeatures {
-        viewBinding = true
+    defaultConfig {
+        multiDexEnabled = true
     }
 }
 
@@ -47,10 +47,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.database)
+    implementation(libs.firebase.messaging)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("com.google.gsm:google-services:4.3.9")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("com.google.firebase:firebase-analytics:22.1.2")
 }

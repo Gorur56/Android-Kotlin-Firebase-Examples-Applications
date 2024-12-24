@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.crudadmin"
+    namespace = "com.example.crudclient"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.crudadmin"
+        applicationId = "com.example.crudclient"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
@@ -34,10 +34,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
@@ -51,6 +47,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation("com.google.gsm:google-services:4.3.9")
 }
