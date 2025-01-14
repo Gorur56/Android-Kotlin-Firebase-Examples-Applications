@@ -7,78 +7,82 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_vertical"
-    android:background="@drawable/uploadbkg"
-    tools:context=".UploadActivity">
+    android:background="@drawable/updatebkg"
+    tools:context=".UpdateActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="300dp"
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/edittextUploadName"
+            android:id="@+id/edittextUpdateReferencePhone"
             android:background="@drawable/lavender_border"
+            android:hint="Enter phone number"
+            android:padding="16dp"
+            android:textColor="@color/lavender"
+            android:gravity="start|center_vertical"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/edittextUpdateName"
+            android:background="@drawable/lavender_border"
             android:hint="Enter name"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
             android:padding="16dp"
+            android:textColor="@color/lavender"
             android:gravity="start|center_vertical"
-            android:textColor="@color/lavender"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/edittextUploadOperator"
+            android:id="@+id/edittextUpdateOperator"
             android:background="@drawable/lavender_border"
-            android:layout_marginTop="20dp"
-            android:hint="Enter Operator"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
+            android:hint="Enter operator"
             android:padding="16dp"
+            android:textColor="@color/lavender"
             android:gravity="start|center_vertical"
-            android:textColor="@color/lavender"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/edittextUploadLocation"
+            android:id="@+id/edittextUpdateLocation"
             android:background="@drawable/lavender_border"
-            android:layout_marginTop="20dp"
-            android:hint="Enter Location"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
+            android:hint="Enter location"
             android:padding="16dp"
+            android:textColor="@color/lavender"
             android:gravity="start|center_vertical"
-            android:textColor="@color/lavender"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
 
-        <EditText
+        <Button
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:id="@+id/edittextUploadPhone"
-            android:background="@drawable/lavender_border"
+            android:id="@+id/buttonUpdate"
+            android:text="Update"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"
             android:layout_marginTop="20dp"
-            android:hint="Enter Phone Number"
             android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:padding="16dp"
-            android:gravity="start|center_vertical"
-            android:textColor="@color/lavender"/>
+            android:layout_marginStart="10dp"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:id="@+id/buttonSave"
-        android:textSize="18sp"
-        android:text="Save"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:cornerRadius="20dp"/>
     </LinearLayout>
+
 </LinearLayout>

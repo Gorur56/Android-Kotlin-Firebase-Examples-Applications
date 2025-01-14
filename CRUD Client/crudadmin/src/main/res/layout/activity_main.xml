@@ -38,7 +38,7 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
                 android:layout_height="70dp"
-                android:text="Upload"
+                android:text="Update"
                 android:id="@+id/buttonMainUpdate"
                 android:textSize="18sp"
                 android:padding="16dp"
