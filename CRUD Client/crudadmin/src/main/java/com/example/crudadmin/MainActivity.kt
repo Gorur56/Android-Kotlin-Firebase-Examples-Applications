@@ -2,6 +2,7 @@ package com.example.crudadmin
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,16 +23,18 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.buttonMainUpload.setOnClickListener {
+        binding.buttonMainUpload.setOnClickListener(View.OnClickListener{
             val intent = Intent(this@MainActivity, UploadActivity::class.java)
             startActivity(intent)
             finish()
-        }
-
-        binding.buttonMainUpdate.setOnClickListener {
+        })
+        binding.buttonMainUpdate.setOnClickListener(View.OnClickListener{
             val intent = Intent(this@MainActivity, UpdateActivity::class.java)
             startActivity(intent)
-             finish()
-        }
+        })
+        binding.buttonMainDelete.setOnClickListener(View.OnClickListener{
+            val intent = Intent(this@MainActivity, DeleteActivity::class.java)
+            startActivity(intent)
+        })
     }
 }
